@@ -1,0 +1,23 @@
+<?php
+// Template: Rename this file to database.php and fill in your credentials
+// For local development, use local MySQL settings
+// For production, use the credentials from Hostinger
+
+$isLocal = ($_SERVER['HTTP_HOST'] ?? '') === 'localhost:8000' ||
+           ($_SERVER['SERVER_NAME'] ?? '') === 'localhost';
+
+if ($isLocal) {
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'YOUR_LOCAL_DB_NAME');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('DB_CHARSET', 'utf8mb4');
+} else {
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'YOUR_PRODUCTION_DB_NAME');
+    define('DB_USER', 'YOUR_PRODUCTION_DB_USER');
+    define('DB_PASS', 'YOUR_PRODUCTION_DB_PASSWORD');
+    define('DB_CHARSET', 'utf8mb4');
+}
+
+class Database { ... } // (Rest of the file structure remains same)

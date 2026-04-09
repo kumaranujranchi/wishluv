@@ -23,3 +23,6 @@ walkthrough.md
 
 # Logs
 *.log
+
+# Sensitive Data
+config/database.php
