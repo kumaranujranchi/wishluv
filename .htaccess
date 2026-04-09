@@ -3,3 +3,7 @@ RewriteEngine On
 LsRecaptcha 100
 RewriteRule .* - [E=verifycaptcha:drop]
 ### HOSTINGER LITESHIELD RECAPTCHA, DO NOT REMOVE THIS LINE ###
+
+# Stop Bot Traffic - Mark Contact pages as Gone (410)
+RewriteRule ^contact\.php$ - [G,L]
+RewriteRule ^contact-us\.php$ - [G,L]

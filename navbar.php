@@ -161,9 +161,9 @@
                            <li><a class="dropdown-item" href="apply.php">Apply Here</a></li>
                         </ul>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="contact.php">Contact</a>
-                     </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact-us.php">Contact</a>
+                     </li> -->
                   </ul>
                </div>
                <div class="mobile-menu d-block d-lg-none">
@@ -349,9 +349,9 @@
                            </li>
                         </ul>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="contact.php">Contact</a>
-                     </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact-us.php">Contact</a>
+                     </li> -->
                      <!-- end accordion panel -->
                   </ul>
                </div>
@@ -359,7 +359,7 @@
          </div>
       </div>
       <div class="appointmentBtn d-lg-block d-none">
-         <a href="contact.php">Make Schedule <span>+</span></a>
+         <!-- <a href="contact-us.php">Make Schedule <span>+</span></a> -->
       </div>
       <div class="left-most-menu">
          <!-- <ul>

@@ -127,7 +127,7 @@
             <div class="mt-5 p-5 bg-danger text-white rounded shadow text-center">
                 <h3 class="mb-3">Start Your Investment Journey Today</h3>
                 <p class="lead mb-4">Join over 500+ investors who have chosen Wishluv Buildcon for their real estate investments.</p>
-                <a href="contact.php" class="btn btn-light rounded-pill px-5 py-3 fw-bold">Get Investment Advice</a>
+                <a href="contact-us.php" class="btn btn-light rounded-pill px-5 py-3 fw-bold">Get Investment Advice</a>
             </div>
         </div>
     </section>

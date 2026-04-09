@@ -139,7 +139,7 @@
             
             <div class="text-center mt-5">
                 <p class="mb-3">Looking for a specific plot size or budget?</p>
-                <a href="contact.php" class="btn btn-danger rounded-pill px-5 py-3">Inquire About Plots</a>
+                <a href="contact-us.php" class="btn btn-danger rounded-pill px-5 py-3">Inquire About Plots</a>
             </div>
         </div>
     </section>

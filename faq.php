@@ -129,7 +129,7 @@
                     
                     <div class="text-center mt-5">
                         <p>Still have more questions?</p>
-                        <a href="contact.php" class="btn btn-danger rounded-pill px-5 py-3">Talk to our Experts</a>
+                        <a href="contact-us.php" class="btn btn-danger rounded-pill px-5 py-3">Talk to our Experts</a>
                     </div>
                 </div>
             </div>
