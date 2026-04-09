@@ -1,3 +1,10 @@
+<?php
+session_start();
+$num1 = rand(1, 9);
+$num2 = rand(1, 9);
+$_SESSION['contact_captcha'] = $num1 + $num2;
+$_SESSION['form_load_time'] = time();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,6 +102,11 @@
                                 <!-- Honeypot Field (Hidden from users) -->
                                 <div style="display:none;">
                                     <input type="text" name="website" id="website">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="captcha" class="form-label">Security Question: <?php echo "$num1 + $num2 = ?"; ?></label>
+                                    <input type="number" class="form-control" id="captcha" name="captcha" placeholder="Enter result" required>
                                 </div>
 
                                 <div class="mt-4">

@@ -1,10 +1,14 @@
 <?php
+session_start();
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
 
-require_once '../config/database.php';
+// 1. Better Referer Check
+$allowed_host = 'wishluvbuildcon.com';
+$referer = $_SERVER['HTTP_REFERER'] ?? '';
+if (!empty($referer) && parse_url($referer, PHP_URL_HOST) !== 'localhost' && strpos($referer, $allowed_host) === false) {
+    echo json_encode(['success' => false, 'message' => 'Direct form submission not allowed.']);
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -15,12 +19,32 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 try {
     $conn = getDBConnection();
     
-    // Honeypot check for bots
+    // 2. Timed Token Check (Bots submit too fast)
+    $load_time = $_SESSION['form_load_time'] ?? 0;
+    if (time() - $load_time < 3) {
+        // Silent fail or warning
+        echo json_encode(['success' => false, 'message' => 'Submission too fast. Please wait a few seconds.']);
+        exit;
+    }
+
+    // 3. Honeypot check for bots
     if (!empty($_POST['website'])) {
         // Silent block - act like it succeeded but do nothing
         echo json_encode(['success' => true, 'message' => 'Thank you for contacting us!']);
         exit;
     }
+
+    // 4. Math Captcha Verification
+    $user_captcha = (int)($_POST['captcha'] ?? 0);
+    $saved_captcha = (int)($_SESSION['contact_captcha'] ?? -1);
+    
+    if ($user_captcha !== $saved_captcha || $saved_captcha === -1) {
+        echo json_encode(['success' => false, 'message' => 'Incorrect security answer. Please try again.']);
+        exit;
+    }
+
+    // Clear captcha so it can't be reused
+    unset($_SESSION['contact_captcha']);
 
     // Get form data
     $first_name = trim($_POST['first_name'] ?? '');
