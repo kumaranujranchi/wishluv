@@ -158,7 +158,6 @@
                            <!-- <li><a class="dropdown-item" href="#">Employee Testimonials</a></li> -->
                            <!-- <li><a class="dropdown-item" href="#">Internship programs</a></li> -->
                            <!-- <li><a class="dropdown-item" href="#">Available internships</a></li> -->
-                           <li><a class="dropdown-item" href="apply.php">Apply Here</a></li>
                         </ul>
                      </li>
                      <!-- <li class="nav-item">
@@ -344,9 +343,6 @@
                            <li>
                               <a href="#">Available internships</a>
                            </li> -->
-                           <li>
-                              <a href="apply.php">Apply Here</a>
-                           </li>
                         </ul>
                      </li>
                      <!-- <li class="nav-item">

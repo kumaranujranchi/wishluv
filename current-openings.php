@@ -64,7 +64,6 @@
                                     <p class="text-muted mb-0">We are looking for result-oriented Sales Executives to join our residential plots division. Candidate should have good communication skills and a deep understanding of the real estate market in Patna.</p>
                                 </div>
                                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                    <a href="apply.php?position=Sales%20Executive" class="btn btn-danger rounded-pill px-4">Apply Now</a>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +83,6 @@
                                     <p class="text-muted mb-0">seeking an experienced Marketing Manager to develop and execute marketing strategies for our upcoming real estate projects. Experience in digital marketing and brand management is preferred.</p>
                                 </div>
                                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                    <a href="apply.php?position=Marketing%20Manager" class="btn btn-danger rounded-pill px-4">Apply Now</a>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +102,6 @@
                                     <p class="text-muted mb-0">We require an organized Office Assistant to handle day-to-day administrative tasks at our SK Puri office. Freshers with good computer knowledge are welcome to apply.</p>
                                 </div>
                                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                    <a href="apply.php?position=Office%20Assistant" class="btn btn-danger rounded-pill px-4">Apply Now</a>
                                 </div>
                             </div>
                         </div>
@@ -112,11 +109,7 @@
                 </div>
             </div>
 
-            <div class="text-center mt-5 p-5 bg-light rounded shadow-sm">
-                <h4>Don't see a matching role?</h4>
-                <p>We are always looking for great talent. Send us your resume and we'll keep you in mind for future openings.</p>
-                <a href="apply.php" class="btn btn-outline-danger px-5 rounded-pill mt-2">Send General Application</a>
-            </div>
+
         </div>
     </section>
 

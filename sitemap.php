@@ -80,7 +80,6 @@
                         <li><a href="plot-service.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Plot Services</a></li>
                         <li><a href="investment-benefit.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Investment Benefits</a></li>
                         <li><a href="current-openings.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Current Openings</a></li>
-                        <li><a href="apply.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Apply Now</a></li>
                     </ul>
                 </div>
             </div>
