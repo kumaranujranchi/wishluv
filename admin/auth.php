@@ -16,9 +16,11 @@ class Auth {
             $user = $stmt->fetch();
             
             if ($user && $user['is_active'] && password_verify($password, $user['password'])) {
-                // Update last login
-                $updateStmt = $this->conn->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
-                $updateStmt->execute([$user['id']]);
+            /* 
+            // Update last login (Disabled as column might be missing)
+            $updateStmt = $this->conn->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
+            $updateStmt->execute([$user['id']]);
+            */
                 
                 // Set session variables
                 $_SESSION['admin_logged_in'] = true;
