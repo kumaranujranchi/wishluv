@@ -4,6 +4,7 @@ require_once '../config/database.php';
 
 class Auth {
     private $conn;
+    public $lastError = '';
     
     public function __construct() {
         $this->conn = getDBConnection();
@@ -15,12 +16,27 @@ class Auth {
             $stmt->execute([$username, $username]);
             $user = $stmt->fetch();
             
+            if (!$user) {
+                $this->lastError = 'User not found in database.';
+                return false;
+            }
+            
+            if (!$user['is_active']) {
+                $this->lastError = 'User account is inactive.';
+                return false;
+            }
+            
+            if (!password_verify($password, $user['password'])) {
+                $this->lastError = 'Password verification failed. Incorrect password.';
+                return false;
+            }
+
             if ($user && $user['is_active'] && password_verify($password, $user['password'])) {
-            /* 
-            // Update last login (Disabled as column might be missing)
-            $updateStmt = $this->conn->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
-            $updateStmt->execute([$user['id']]);
-            */
+                /* 
+                // Update last login (Disabled as column might be missing)
+                $updateStmt = $this->conn->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
+                $updateStmt->execute([$user['id']]);
+                */
                 
                 // Set session variables
                 $_SESSION['admin_logged_in'] = true;
@@ -34,6 +50,10 @@ class Auth {
             }
             return false;
         } catch(PDOException $e) {
+            $this->lastError = 'Database Error: ' . $e->getMessage();
+            return false;
+        } catch(Exception $e) {
+            $this->lastError = 'General Error: ' . $e->getMessage();
             return false;
         }
     }
