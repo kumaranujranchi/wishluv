@@ -46,7 +46,7 @@
                             <i class="fas fa-shield-alt text-danger me-2"></i> <strong>Gated Community</strong>
                         </div>
                     </div>
-                    <a href="contact-us.php?interest=Wishluv%20Town" class="btn btn-danger rounded-pill px-5 mt-3">Book Your Plot</a>
+                    <!-- <a href="contact-us.php?interest=Wishluv%20Town" class="btn btn-danger rounded-pill px-5 mt-3">Book Your Plot</a> -->
                 </div>
                 <div class="col-lg-6">
                     <img src="./images/featured-3.webp" alt="Wishluv Town" class="img-fluid rounded shadow">

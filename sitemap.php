@@ -57,7 +57,7 @@
                     <ul class="sitemap-list">
                         <li><a href="index.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Home</a></li>
                         <li><a href="about.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> About Us</a></li>
-                        <li><a href="contact-us.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Contact Us</a></li>
+                        <!-- <li><a href="contact-us.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Contact Us</a></li> -->
                         <li><a href="faq.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> FAQ</a></li>
                         <li><a href="sitemap.php"><i class="fas fa-chevron-right me-2 text-danger small"></i> Sitemap</a></li>
                     </ul>
