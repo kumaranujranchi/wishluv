@@ -71,8 +71,8 @@ try {
                 <!-- Enhanced header with search and quick actions -->
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-4">
                     <div>
-                        <h1 class="h2 mb-1">Dashboard</h1>
-                        <p class="text-muted mb-0">Welcome back, <?php echo htmlspecialchars($currentUser['name']); ?>! Here's what's happening today.</p>
+                        <h2 class="fw-bold mb-0">Dashboard</h2>
+                        <p class="text-muted small">Welcome back, <?php echo htmlspecialchars($currentUser['name']); ?>!</p>
                     </div>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
@@ -109,11 +109,14 @@ try {
                 <div class="row mb-4">
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card stats-card h-100" onclick="location.href='leads.php'" role="button" tabindex="0">
-                            <div class="card-body">
-                                <div class="stats-label">Total Leads</div>
-                                <div class="stats-number"><?php echo $leadsStats['total'] ?? 0; ?></div>
-                                <div class="stats-icon">
-                                    <i class="fas fa-users"></i>
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <div class="stats-label">Total Leads</div>
+                                        <div class="stats-number"><?php echo $leadsStats['total'] ?? 0; ?></div>
+                                    </div>
+                                    <div class="stats-icon bg-light-red text-red">
+                                        <i class="fas fa-users"></i>
+                                    </div>
                                 </div>
                                 <div class="mt-2">
                                     <small class="text-muted">
@@ -126,12 +129,16 @@ try {
                     </div>
                     
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card stats-card success h-100" onclick="location.href='leads.php?status=new'" role="button" tabindex="0">
+                        <div class="card stats-card h-100 border-left-success" onclick="location.href='leads.php?status=new'" role="button" tabindex="0">
                             <div class="card-body">
-                                <div class="stats-label">New Leads</div>
-                                <div class="stats-number"><?php echo $leadsStats['new_leads'] ?? 0; ?></div>
-                                <div class="stats-icon">
-                                    <i class="fas fa-user-plus"></i>
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <div class="stats-label">New Leads</div>
+                                        <div class="stats-number text-success"><?php echo $leadsStats['new_leads'] ?? 0; ?></div>
+                                    </div>
+                                    <div class="stats-icon bg-light-success text-success">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
                                 </div>
                                 <div class="mt-2">
                                     <small class="text-muted">
@@ -144,12 +151,16 @@ try {
                     </div>
 
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card stats-card info h-100" onclick="location.href='job_applications.php'" role="button" tabindex="0">
+                        <div class="card stats-card h-100 border-left-info" onclick="location.href='job_applications.php'" role="button" tabindex="0">
                             <div class="card-body">
-                                <div class="stats-label">Job Applications</div>
-                                <div class="stats-number"><?php echo $jobsStats['total'] ?? 0; ?></div>
-                                <div class="stats-icon">
-                                    <i class="fas fa-briefcase"></i>
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <div class="stats-label">Job Applications</div>
+                                        <div class="stats-number text-info"><?php echo $jobsStats['total'] ?? 0; ?></div>
+                                    </div>
+                                    <div class="stats-icon bg-light-info text-info">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
                                 </div>
                                 <div class="mt-2">
                                     <small class="text-muted">
@@ -162,12 +173,16 @@ try {
                     </div>
                     
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card stats-card warning h-100" onclick="location.href='leads.php?status=converted'" role="button" tabindex="0">
+                        <div class="card stats-card h-100 border-left-warning" onclick="location.href='leads.php?status=converted'" role="button" tabindex="0">
                             <div class="card-body">
-                                <div class="stats-label">Converted Leads</div>
-                                <div class="stats-number"><?php echo $leadsStats['converted'] ?? 0; ?></div>
-                                <div class="stats-icon">
-                                    <i class="fas fa-check-circle"></i>
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <div class="stats-label">Converted Leads</div>
+                                        <div class="stats-number text-warning"><?php echo $leadsStats['converted'] ?? 0; ?></div>
+                                    </div>
+                                    <div class="stats-icon bg-light-warning text-warning">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
                                 </div>
                                 <div class="mt-2">
                                     <?php if (($leadsStats['converted'] ?? 0) > 0): ?>
@@ -191,8 +206,8 @@ try {
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="table-container">
-                            <div class="table-controls">
-                                <h5 class="mb-0"><i class="fas fa-users text-primary me-2"></i>Recent Leads</h5>
+                            <div class="table-controls py-2 px-3">
+                                <h6 class="mb-0 fw-bold"><i class="fas fa-users text-danger me-2"></i>Recent Leads</h6>
                                 <div class="ms-auto">
                                     <a href="leads.php" class="btn btn-sm btn-outline-primary">
                                         View All <i class="fas fa-arrow-right ms-1"></i>
@@ -258,8 +273,8 @@ try {
                     
                     <div class="col-lg-6">
                         <div class="table-container">
-                            <div class="table-controls">
-                                <h5 class="mb-0"><i class="fas fa-briefcase text-info me-2"></i>Recent Applications</h5>
+                            <div class="table-controls py-2 px-3">
+                                <h6 class="mb-0 fw-bold"><i class="fas fa-briefcase text-info me-2"></i>Recent Applications</h6>
                                 <div class="ms-auto">
                                     <a href="job_applications.php" class="btn btn-sm btn-outline-info">
                                         View All <i class="fas fa-arrow-right ms-1"></i>
@@ -327,15 +342,15 @@ try {
                 <!-- Quick Stats Summary -->
                 <div class="row mt-4">
                     <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body py-3">
                                 <div class="row text-center">
-                                    <div class="col-md-3">
-                                        <div class="mb-2">
-                                            <i class="fas fa-chart-line fa-2x text-primary"></i>
+                                    <div class="col-md-3 border-end">
+                                        <div class="mb-1">
+                                            <i class="fas fa-chart-line text-red" style="font-size: 1.2rem;"></i>
                                         </div>
-                                        <h6>Conversion Rate</h6>
-                                        <p class="text-muted mb-0">
+                                        <h6 class="small fw-bold mb-1">Conversion Rate</h6>
+                                        <p class="h5 mb-0 fw-extrabold">
                                             <?php
                                             $total = $leadsStats['total'] ?? 0;
                                             $converted = $leadsStats['converted'] ?? 0;
@@ -344,29 +359,29 @@ try {
                                             ?>
                                         </p>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-2">
-                                            <i class="fas fa-clock fa-2x text-info"></i>
+                                    <div class="col-md-3 border-end">
+                                        <div class="mb-1">
+                                            <i class="fas fa-clock text-info" style="font-size: 1.2rem;"></i>
                                         </div>
-                                        <h6>Avg. Response Time</h6>
-                                        <p class="text-muted mb-0">2.5 hours</p>
+                                        <h6 class="small fw-bold mb-1">Avg. Response</h6>
+                                        <p class="h5 mb-0 fw-extrabold">2.5h</p>
+                                    </div>
+                                    <div class="col-md-3 border-end">
+                                        <div class="mb-1">
+                                            <i class="fas fa-star text-warning" style="font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h6 class="small fw-bold mb-1">Satisfaction</h6>
+                                        <p class="h5 mb-0 fw-extrabold">4.8/5.0</p>
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="mb-2">
-                                            <i class="fas fa-star fa-2x text-warning"></i>
+                                        <div class="mb-1">
+                                            <i class="fas fa-trophy text-success" style="font-size: 1.2rem;"></i>
                                         </div>
-                                        <h6>Customer Satisfaction</h6>
-                                        <p class="text-muted mb-0">4.8/5.0</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-2">
-                                            <i class="fas fa-trophy fa-2x text-success"></i>
-                                        </div>
-                                        <h6>Monthly Goal</h6>
-                                        <div class="progress-modern mt-2">
+                                        <h6 class="small fw-bold mb-1">Monthly Goal</h6>
+                                        <div class="progress-modern mx-auto mt-1" style="width: 80%; height: 6px;">
                                             <div class="progress-bar-modern" style="width: 75%"></div>
                                         </div>
-                                        <p class="text-muted mb-0 mt-1">75% Complete</p>
+                                        <p class="small text-muted mb-0 mt-1">75% Complete</p>
                                     </div>
                                 </div>
                             </div>

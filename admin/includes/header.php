@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="dashboard.php">
-            <i class="fas fa-building"></i> Wishluv Buildcon
+<nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom sticky-top py-1">
+    <div class="container-fluid px-3">
+        <a class="navbar-brand fw-bold text-red" href="dashboard.php">
+            <i class="fas fa-building me-2"></i>Wishluv Buildcon
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
