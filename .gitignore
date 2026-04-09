@@ -1,0 +1,25 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
+
+# Gemini Agent files
+.gemini/
+task.md
+implementation_plan.md
+walkthrough.md
+
+# Application specific
+/uploads/resumes/*
+!/uploads/resumes/.gitkeep
+/api/uploads/*
+!/api/uploads/.htaccess
+!/api/uploads/.gitkeep
+
+# Logs
+*.log

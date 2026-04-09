@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Restore Verification - Wishluv Buildcon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .status-good { color: #28a745; }
+        .status-bad { color: #dc3545; }
+        .status-warning { color: #ffc107; }
+        .test-card {
+            transition: transform 0.2s;
+        }
+        .test-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0"><i class="fas fa-check-circle"></i> Layout Restore Verification</h2>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="alert alert-success">
+                            <h5><i class="fas fa-info-circle"></i> Website Layout Successfully Restored!</h5>
+                            <p class="mb-0">सभी files को original state में restore कर दिया गया है। अब आपकी website का layout पहले जैसा हो जाना चाहिए।</p>
+                        </div>
+
+                        <!-- Restoration Status -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5><i class="fas fa-undo"></i> Files Restored to Original State</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>✅ Core Files Restored:</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check status-good"></i> include.php - CSS links restored</li>
+                                            <li><i class="fas fa-check status-good"></i> vendor.php - JS links restored</li>
+                                            <li><i class="fas fa-check status-good"></i> index.php - Video section restored</li>
+                                            <li><i class="fas fa-check status-good"></i> css/custom.css - Font import restored</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>✅ JavaScript Files Restored:</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check status-good"></i> js/main.js - Original spinner & WOW.js</li>
+                                            <li><i class="fas fa-check status-good"></i> js/scripts.js - Original carousel code</li>
+                                            <li><i class="fas fa-check status-good"></i> admin/job_applications.php - Original query</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Test Links -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5><i class="fas fa-external-link-alt"></i> Test Your Website Now</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Main Website Pages:</h6>
+                                        <div class="d-grid gap-2">
+                                            <a href="index.php" target="_blank" class="btn btn-primary">
+                                                <i class="fas fa-home"></i> Test Homepage
+                                            </a>
+                                            <a href="contact.php" target="_blank" class="btn btn-info">
+                                                <i class="fas fa-envelope"></i> Test Contact Form
+                                            </a>
+                                            <a href="apply.php" target="_blank" class="btn btn-success">
+                                                <i class="fas fa-briefcase"></i> Test Job Application
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Admin Panel:</h6>
+                                        <div class="d-grid gap-2">
+                                            <a href="admin/" target="_blank" class="btn btn-warning">
+                                                <i class="fas fa-user-shield"></i> Test Admin Login
+                                            </a>
+                                            <a href="admin/dashboard.php" target="_blank" class="btn btn-secondary">
+                                                <i class="fas fa-tachometer-alt"></i> Test Dashboard
+                                            </a>
+                                            <a href="admin/job_applications.php" target="_blank" class="btn btn-dark">
+                                                <i class="fas fa-users"></i> Test Job Applications
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- What Was Restored -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5><i class="fas fa-list-check"></i> What Was Restored</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card test-card border-success">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-code fa-2x text-success mb-2"></i>
+                                                <h6>CSS Loading</h6>
+                                                <p class="small mb-0">Bootstrap, Font Awesome, और Custom CSS वापस normal loading में</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card test-card border-info">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-font fa-2x text-info mb-2"></i>
+                                                <h6>Font Loading</h6>
+                                                <p class="small mb-0">Google Fonts (Quicksand) वापस CSS में import</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card test-card border-warning">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-play fa-2x text-warning mb-2"></i>
+                                                <h6>Video Loading</h6>
+                                                <p class="small mb-0">Homepage video वापस normal autoplay में</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <div class="card test-card border-primary">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-cogs fa-2x text-primary mb-2"></i>
+                                                <h6>JavaScript</h6>
+                                                <p class="small mb-0">jQuery, Bootstrap, Owl Carousel वापस normal loading</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card test-card border-secondary">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-magic fa-2x text-secondary mb-2"></i>
+                                                <h6>Animations</h6>
+                                                <p class="small mb-0">WOW.js animations वापस original state में</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card test-card border-dark">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-database fa-2x text-dark mb-2"></i>
+                                                <h6>Database</h6>
+                                                <p class="small mb-0">Admin queries वापस original SELECT * format में</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Troubleshooting -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><i class="fas fa-tools"></i> अगर अभी भी कोई Problem है</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>🔧 Quick Fixes:</h6>
+                                        <ol>
+                                            <li><strong>Browser Cache Clear करें:</strong> Ctrl+Shift+Delete</li>
+                                            <li><strong>Hard Refresh करें:</strong> Ctrl+F5</li>
+                                            <li><strong>Incognito Mode में test करें</strong></li>
+                                            <li><strong>Different browser में check करें</strong></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>🚨 अगर Layout अभी भी टूटा है:</h6>
+                                        <ol>
+                                            <li><strong>Files properly upload हुई हैं check करें</strong></li>
+                                            <li><strong>File permissions check करें (644)</strong></li>
+                                            <li><strong>Browser console errors check करें (F12)</strong></li>
+                                            <li><strong>Original backup files restore करें</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info mt-3">
+                                    <strong><i class="fas fa-lightbulb"></i> Pro Tip:</strong> 
+                                    अगर सब कुछ ठीक लग रहा है लेकिन कुछ styling issues हैं, तो browser cache clear करना usually solve कर देता है।
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="mt-4 text-center">
+                            <button onclick="clearCache()" class="btn btn-warning me-2">
+                                <i class="fas fa-broom"></i> Clear Browser Cache
+                            </button>
+                            <button onclick="testAllPages()" class="btn btn-success me-2">
+                                <i class="fas fa-check-double"></i> Test All Pages
+                            </button>
+                            <a href="index.php" class="btn btn-primary">
+                                <i class="fas fa-home"></i> Go to Homepage
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function clearCache() {
+            if (confirm('Browser cache clear करने के लिए page reload होगा। Continue करें?')) {
+                // Clear cache and reload
+                if ('caches' in window) {
+                    caches.keys().then(names => {
+                        names.forEach(name => {
+                            caches.delete(name);
+                        });
+                    });
+                }
+                location.reload(true);
+            }
+        }
+
+        function testAllPages() {
+            const pages = ['index.php', 'contact.php', 'apply.php', 'admin/'];
+            let testResults = [];
+            
+            pages.forEach((page, index) => {
+                setTimeout(() => {
+                    window.open(page, '_blank');
+                }, index * 1000);
+            });
+            
+            alert('सभी main pages नई tabs में खुल रहे हैं। Check करें कि सब कुछ properly load हो रहा है।');
+        }
+
+        // Auto-check if page loaded properly
+        window.addEventListener('load', function() {
+            console.log('✅ Layout restore verification page loaded successfully');
+            
+            // Check if Bootstrap is loaded
+            if (typeof bootstrap !== 'undefined') {
+                console.log('✅ Bootstrap loaded correctly');
+            } else {
+                console.log('❌ Bootstrap not loaded');
+            }
+            
+            // Check if jQuery is available (if used)
+            if (typeof $ !== 'undefined') {
+                console.log('✅ jQuery loaded correctly');
+            }
+        });
+    </script>
+</body>
+</html>

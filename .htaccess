@@ -1,0 +1,5 @@
+### HOSTINGER LITESHIELD RECAPTCHA, DO NOT REMOVE THIS LINE ###
+RewriteEngine On
+LsRecaptcha 100
+RewriteRule .* - [E=verifycaptcha:drop]
+### HOSTINGER LITESHIELD RECAPTCHA, DO NOT REMOVE THIS LINE ###

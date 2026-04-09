@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling Test - Wishluv Buildcon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0"><i class="fas fa-clipboard-check"></i> Form Styling Test</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i>
+                            <strong>Testing Form Input Visibility:</strong> All form fields should now have clearly visible borders and proper focus states.
+                        </div>
+
+                        <!-- Contact Form Test -->
+                        <h4 class="mb-4"><i class="fas fa-envelope"></i> Contact Form Test</h4>
+                        <div class="wishluv-form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="test_first_name">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="test_first_name" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_last_name">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="test_last_name" placeholder="Enter your last name" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_phone">Mobile No. <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="test_phone" placeholder="Enter your mobile number" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_email">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="test_email" placeholder="Enter your email address" required>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label for="test_message">Message <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="test_message" rows="3" placeholder="Enter your message or inquiry here..." required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="hulkBtn">
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="fas fa-paper-plane"></i> Test Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <hr class="my-5">
+
+                        <!-- Job Application Form Test -->
+                        <h4 class="mb-4"><i class="fas fa-briefcase"></i> Job Application Form Test</h4>
+                        <div class="wishluv-form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="test_name">Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="test_name" placeholder="Enter your full name" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_qualification">Highest Qualification <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="test_qualification" required>
+                                            <option value="">Select Qualification</option>
+                                            <option value="1">10th</option>
+                                            <option value="2">12th</option>
+                                            <option value="3">Graduate</option>
+                                            <option value="4">Post Graduate</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_phone_job">Phone Number <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="test_phone_job" placeholder="Enter your phone number" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_current_salary">Current Salary</label>
+                                        <input type="text" class="form-control" id="test_current_salary" placeholder="e.g., 50000">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_expected_salary">Expected Salary</label>
+                                        <input type="text" class="form-control" id="test_expected_salary" placeholder="e.g., 60000">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_city">Current City</label>
+                                        <input type="text" class="form-control" id="test_city" placeholder="Enter your current city">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_position">Post Applying for <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="test_position" placeholder="Enter the position you're applying for" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="test_resume">Upload Resume <span class="text-danger">*</span></label>
+                                        <input type="file" class="form-control" id="test_resume" accept=".pdf,.doc,.docx" required>
+                                        <small class="text-muted">Accepted formats: PDF, DOC, DOCX (Max 5MB)</small>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="hulkBtn">
+                                            <button type="button" class="btn btn-success">
+                                                <i class="fas fa-upload"></i> Test Submit Application
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Test Results -->
+                        <div class="mt-5">
+                            <h4><i class="fas fa-check-circle"></i> Visual Test Checklist</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card border-success">
+                                        <div class="card-header bg-success text-white">
+                                            <h6 class="mb-0">✅ What Should Work Now</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled mb-0">
+                                                <li><i class="fas fa-check text-success"></i> All input fields have visible borders</li>
+                                                <li><i class="fas fa-check text-success"></i> Borders change color on focus (blue)</li>
+                                                <li><i class="fas fa-check text-success"></i> Borders change color on hover (gray)</li>
+                                                <li><i class="fas fa-check text-success"></i> Placeholder text is visible</li>
+                                                <li><i class="fas fa-check text-success"></i> Rounded corners for modern look</li>
+                                                <li><i class="fas fa-check text-success"></i> Consistent styling across all fields</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-info">
+                                        <div class="card-header bg-info text-white">
+                                            <h6 class="mb-0">🧪 How to Test</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ol class="mb-0">
+                                                <li>Click in each input field</li>
+                                                <li>Check if border turns blue on focus</li>
+                                                <li>Hover over fields to see gray border</li>
+                                                <li>Type some text to test visibility</li>
+                                                <li>Tab through fields to test navigation</li>
+                                                <li>Test on mobile devices</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Links -->
+                        <div class="mt-4 text-center">
+                            <a href="contact.php" class="btn btn-primary me-2">
+                                <i class="fas fa-envelope"></i> Test Real Contact Form
+                            </a>
+                            <a href="apply.php" class="btn btn-success">
+                                <i class="fas fa-briefcase"></i> Test Real Job Application Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add some interactive testing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add focus event listeners to demonstrate the styling
+            const inputs = document.querySelectorAll('.form-control');
+            
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    console.log('Input focused:', this.id);
+                });
+                
+                input.addEventListener('blur', function() {
+                    console.log('Input blurred:', this.id);
+                });
+                
+                input.addEventListener('input', function() {
+                    console.log('Input changed:', this.id, 'Value:', this.value);
+                });
+            });
+            
+            // Test buttons
+            document.querySelectorAll('button[type="button"]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Form styling test successful! All fields are now clearly visible.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

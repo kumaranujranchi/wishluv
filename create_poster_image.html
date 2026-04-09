@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Video Poster Image</title>
+    <style>
+        .poster-generator {
+            width: 1920px;
+            height: 814px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .poster-content {
+            text-align: center;
+            z-index: 2;
+        }
+        .poster-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .poster-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .poster-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .shape1 {
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 50%;
+            top: -150px;
+            right: -150px;
+        }
+        .shape2 {
+            width: 200px;
+            height: 200px;
+            background: white;
+            transform: rotate(45deg);
+            bottom: -100px;
+            left: -100px;
+        }
+        .instructions {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>📸 Video Poster Image Generator</h2>
+        <p><strong>Purpose:</strong> This creates a poster image for the homepage video to prevent layout shift and improve loading performance.</p>
+        
+        <h4>Instructions:</h4>
+        <ol>
+            <li>Right-click on the image below</li>
+            <li>Select "Save image as..." or "Save picture as..."</li>
+            <li>Save as <code>banner-poster.jpg</code> in the <code>images/</code> folder</li>
+            <li>The optimized video loading will use this as a placeholder</li>
+        </ol>
+        
+        <div class="alert" style="background: #d4edda; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+            <strong>✅ Performance Benefit:</strong> Using a poster image prevents layout shift and provides immediate visual content while the video loads in the background.
+        </div>
+    </div>
+
+    <div class="poster-generator" id="posterImage">
+        <div class="geometric-shape shape1"></div>
+        <div class="geometric-shape shape2"></div>
+        <div class="poster-overlay"></div>
+        <div class="poster-content">
+            <div class="poster-title">Wishluv Buildcon</div>
+            <div class="poster-subtitle">Building Dreams, Creating Futures</div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h4>Alternative Options:</h4>
+        <ul>
+            <li><strong>Use existing image:</strong> If you have a company logo or building image, use that instead</li>
+            <li><strong>Extract from video:</strong> Take a screenshot from the actual video file</li>
+            <li><strong>Professional design:</strong> Create a custom poster image with your branding</li>
+        </ul>
+        
+        <h4>Technical Requirements:</h4>
+        <ul>
+            <li><strong>Dimensions:</strong> 1920x814 pixels (matches video aspect ratio)</li>
+            <li><strong>Format:</strong> JPG (for smaller file size) or PNG (for transparency)</li>
+            <li><strong>File size:</strong> Keep under 200KB for optimal performance</li>
+            <li><strong>Location:</strong> Save in <code>images/banner-poster.jpg</code></li>
+        </ul>
+
+        <div style="background: #fff3cd; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+            <strong>⚠️ Note:</strong> This is a temporary placeholder. Replace with your actual company branding or a frame from your video for the best visual impact.
+        </div>
+    </div>
+
+    <script>
+        // Convert the div to a canvas and provide download functionality
+        function downloadPoster() {
+            const element = document.getElementById('posterImage');
+            
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = 1920;
+            canvas.height = 814;
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1920, 814);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Fill background
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1920, 814);
+            
+            // Add overlay
+            ctx.fillStyle = 'rgba(0,0,0,0.3)';
+            ctx.fillRect(0, 0, 1920, 814);
+            
+            // Add text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 64px Arial';
+            ctx.textAlign = 'center';
+            ctx.shadowColor = 'rgba(0,0,0,0.5)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+            
+            ctx.fillText('Wishluv Buildcon', 960, 350);
+            
+            ctx.font = '24px Arial';
+            ctx.fillText('Building Dreams, Creating Futures', 960, 450);
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = 'banner-poster.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.8);
+            link.click();
+        }
+        
+        // Add download button
+        const button = document.createElement('button');
+        button.textContent = '📥 Download Poster Image';
+        button.style.cssText = 'padding: 12px 24px; background: #007bff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; margin: 20px auto; display: block;';
+        button.onclick = downloadPoster;
+        
+        document.querySelector('.instructions').appendChild(button);
+    </script>
+</body>
+</html>
